@@ -4,6 +4,7 @@
     <title>CSE 110 Meeting Notes</title>
     <meta name="description" content="Notes for CSE 110 Meeting" />
     <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/teamwork--v1.png">
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main>
@@ -29,7 +30,7 @@
           <a href="#Current-Objectives">Current Meeting Objectives</a>
         </nav>
         <br>
-        <b>Notes App Focus Diagram</b><br>
+        <b id="Notes-App-Title">Notes App Focus Diagram</b><br>
         <img
           src="notesdiagram.png"
           alt="notes app diagram"
@@ -38,9 +39,9 @@
         >
       </header>
       <hr />
-      <h3>Last Meeting Recap:</h3>
+      <h3 id="Last-Meeting-Head">Last Meeting Recap:</h3>
       <p><strong>Reported bugs:</strong></p>
-      <ul>
+      <ul class="taskList">
         <li>Login Form Disappears</li>
         <li>Volume Slider Doesn't Work</li>
         <li>Occasionally not able to see other people's notes</li>
@@ -55,9 +56,9 @@
       </div>
       <hr />
       <div id="Current-Objectives">
-        <h3>Current Meeting Objectives</h3>
+        <h3 id="Curr-Meeting-Head">Current Meeting Objectives</h3>
         <section>
-          <p>
+          <p id="Curr-Meeting-Summary">
             Progress has been made in fixing the bugs and towards completion of
             the project. We are starting the implementation of being able to
             show hand written notes. Our current concern is making the deadline.
@@ -67,7 +68,7 @@
         </section>
         <p>All previous bugs <i>fixed</i> except login bug</p>
         <p><strong>Order of importance:</strong></p>
-        <ol>
+        <ol class = "taskList">
           <li>Continue Fixing Login</li>
           <li>Implement being able to show hand written notes</li>
           <li>Come up with possible logo</li>

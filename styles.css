@@ -1,0 +1,41 @@
+:root{
+    --heading-bg: hsl(210, 90%, 20%);
+    --heading-text: hsl(0, 0%, 100%);
+    --lastMeet-color: rgb(50, 150, 200);
+    --currMeet-color: #34d523;
+    --title-color: blueviolet;
+}
+
+body{
+    background-color: color(display-p3 0.839 0.885 1 / 1);
+}
+
+#Last-Meeting-Head{
+    color: var(--lastMeet-color, rgb(50, 150, 200))
+}
+#Curr-Meeting-Head{
+    color: var(--currMeet-color,#34d523)
+}
+#Notes-App-Title{
+    color:blueviolet
+    
+}
+h1 {
+    padding: 7px 15px;
+    border-radius: 8px;
+    background-color: var(--heading-bg, hsl(210, 90%, 20%));
+    color: var(--heading-text, hsl(0, 0, 100%));
+}
+
+.taskList {
+    padding: 15px 35px;
+    border-radius: 8px;
+    color: color(display-p3 0 0.4 1);
+    background-color: color-mix(in srgb, color(display-p3 0 0.4 1) 20%, white);
+}
+
+#Curr-Meeting-Summary {
+    padding: 5mm;
+    border-radius: 14Q;
+    background-image: linear-gradient(to top, #19afc3, #00c4be, #00d69f, #4ee46b, #a8eb12);
+}
