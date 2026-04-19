@@ -3,6 +3,7 @@
   <head>
     <title>CSE 110 Meeting Notes</title>
     <meta name="description" content="Notes for CSE 110 Meeting" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/teamwork--v1.png">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -25,9 +26,8 @@
         </p>
 
         <nav>
-          <a href="#Assignments">Last Meeting Assignments</a>
-          <br>
-          <a href="#Current-Objectives">Current Meeting Objectives</a>
+          <a class="last-nav" href="#Assignments">Last Meeting Assignments</a>
+          <a class="curr-nav" href="#Current-Objectives">Current Meeting Objectives</a>
         </nav>
         <br>
         <b id="Notes-App-Title">Notes App Focus Diagram</b><br>
@@ -96,24 +96,35 @@
     <footer>
       <p>Author: <i>Adam Zhou</i></p>
     </footer>
-    <form>
+    <form class="meeting-form">
       <fieldset>
-        <p>Submit any ideas</p>
+        <span class="tag">Idea Form</span>
+        <p class="submit-ideas">Submit any ideas</p>
         <label for="ideas">Ideas: </label>
-        <input type="text" id="ideas" ><br>
+        <input type="text" id="ideas" class="ideas-form"><br>
         <p>Did you participate today?</p>
-        <input type="radio" id="yes" name="participation">
-        <label for="yes">Yes</label>
-        <input type="radio" id="no" name="participation">
-        <label for="no">No</label>
+        <div class="radio-participation">
+          <input type="radio" id="yes" name="participation">
+          <label for="yes">Yes</label>
+          <input type="radio" id="no" name="participation">
+          <label for="no">No</label>
+        </div>
         <br>
         <p>What type of idea is it?</p>
-        <input type="checkbox" id="bug" name="ideas">
-        <label for="bug">Bug</label>
-        <input type="checkbox" id="feature" name="ideas">
-        <label for="feature">Feature</label>
-        <input type="checkbox" id="other" name="ideas">
-        <label for="other">Other</label>
+          <div class="checkbox-ideas">
+            <div class="bug-idea">
+            <input type="checkbox" id="bug" name="ideas">
+            <label for="bug">Bug</label>
+          </div>
+          <div class="feature-idea">
+            <input type="checkbox" id="feature" name="ideas">
+            <label for="feature">Feature</label>
+          </div>
+          <div class="other-idea">
+            <input type="checkbox" id="other" name="ideas">
+            <label for="other">Other</label>
+          </div>
+        </div>
         <br>
         <label for="dateSelect">Enter today's date</label><br>
         <input type="date" id="dateSelect" /><br>
