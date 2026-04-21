@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
 :root{
     --heading-bg: hsl(210, 90%, 20%);
     --heading-text: hsl(0, 0%, 100%);
@@ -7,13 +8,29 @@
     --form-label: rgb(0, 39, 166);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 main {
     max-width: 800px; 
     margin: auto; 
 }
 
+footer {
+    max-width: 800px; 
+    margin: auto;
+}
 body{
     background-color: color(display-p3 0.839 0.885 1 / 1);
+}
+
+h2, h3 {
+    font-family: "Playfair Display", serif;
+}
+
+#meeting-intro{
+    font-family: 'Open Sans', sans-serif;
 }
 
 #Last-Meeting-Head{
@@ -24,7 +41,6 @@ body{
 }
 #Notes-App-Title{
     color:blueviolet
-    
 }
 h1 {
     padding: 7px 15px;
@@ -33,8 +49,16 @@ h1 {
     color: var(--heading-text, hsl(0, 0, 100%));
 }
 
+
+
+#Participant-List{
+    font-family: "Sekuya", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
 .taskList {
-    padding: 15px 35px 15px, 35px;
+    padding: 15px 35px 15px 35px;
     border-radius: 8px;
     color: color(display-p3 0 0.4 1);
     background-color: color-mix(in srgb, color(display-p3 0 0.4 1) 20%, white);
@@ -44,6 +68,10 @@ h1 {
     padding: 5mm;
     border-radius: 14Q;
     background-image: linear-gradient(to top, #19afc3, #00c4be, #00d69f, #4ee46b, #a8eb12);
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 nav {
@@ -73,23 +101,35 @@ nav a{
     border-radius: 5px;
 }
 
+a:hover {
+    opacity: 0.8; 
+    cursor: pointer; 
+}
+
+a:active {
+    transform: scale(0.95); 
+}
+
 a[class="last-nav"] {
-    background-color: purple
+    background-color: purple;
+    font-family: 'Open Sans', sans-serif;
 }
 
 a[class="curr-nav"] {
     background-color: blue
 }
 
-fieldset {
-    border-width: 3px;
-    border-style: solid;
-    border-color: var(--title-color, blueviolet);
-    border-radius: 12px;
-
-    padding: 20px 40px 30px 40px;
-    margin: 20px auto 20px auto; 
-    position: relative; 
+.meeting-form {
+    max-width: 800px;
+    margin: auto;
+    
+    fieldset {
+        position: relative; 
+        margin-top: 30px;
+        border: 3px solid var(--heading-bg, hsl(210, 90%, 20%));
+        border-radius: 10px;
+        padding: 30px;
+    }
 }
 
 .tag{
@@ -123,6 +163,12 @@ fieldset {
     align-items: center; 
 }
 
+.idea:has(input[type="checkbox"]:checked) {
+    background-color: var(--current-color, #34d523);
+    border-radius: 5px;
+    padding: 5px;
+}
+
 form label {
     font-weight: bold;
     font-family: sans-serif;
@@ -139,10 +185,41 @@ input + label {
 }
 
 label ~ textarea {
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--heading-bg, hsl(210, 90%, 20%));
     border-radius: 10px;
 }
 
 p.submit-ideas {
     color: #2700b3;
     font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+    
+    .radio-participation {
+        display: grid;
+        /* Creates exactly two columns: one for the radio circle, one for the text */
+        grid-template-columns: max-content auto; 
+        
+        row-gap: 15px;    /* Adds vertical space between the Yes and No rows */
+        column-gap: 5px;  
+        
+        align-items: center 
+    }
+
+    .checkbox-ideas {
+        grid-template-columns: max-content; 
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0px; 
+    }
+
+    fieldset {
+        padding: 15px;
+        margin: 10px;
+    }
 }
