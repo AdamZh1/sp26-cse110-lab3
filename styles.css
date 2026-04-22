@@ -8,23 +8,30 @@
     --form-label: rgb(0, 39, 166);
 }
 
+/* Main Page CSS */
+
 * {
     box-sizing: border-box;
 }
 
-main {
-    max-width: 800px; 
-    margin: auto; 
-}
-
-footer {
-    max-width: 800px; 
-    margin: auto;
-}
 body{
     background-color: color(display-p3 0.839 0.885 1 / 1);
 }
 
+main, footer {
+    max-width: 800px; 
+    margin: auto; 
+}
+/* -------------------- */
+
+/* Titles and Intro */
+
+h1 {
+    padding: 7px 15px;
+    border-radius: 8px;
+    background-color: var(--heading-bg, hsl(210, 90%, 20%));
+    color: var(--heading-text, hsl(0, 0, 100%));
+}
 h2, h3 {
     font-family: "Playfair Display", serif;
 }
@@ -33,23 +40,9 @@ h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
-#Last-Meeting-Head{
-    color: var(--lastMeet-color, rgb(50, 150, 200))
-}
-#Curr-Meeting-Head{
-    color: var(--currMeet-color,#34d523)
-}
 #Notes-App-Title{
     color:blueviolet
 }
-h1 {
-    padding: 7px 15px;
-    border-radius: 8px;
-    background-color: var(--heading-bg, hsl(210, 90%, 20%));
-    color: var(--heading-text, hsl(0, 0, 100%));
-}
-
-
 
 #Participant-List{
     font-family: "Sekuya", system-ui;
@@ -57,22 +50,9 @@ h1 {
     font-style: normal;
 }
 
-.taskList {
-    padding: 15px 35px 15px 35px;
-    border-radius: 8px;
-    color: color(display-p3 0 0.4 1);
-    background-color: color-mix(in srgb, color(display-p3 0 0.4 1) 20%, white);
-}
+/* -------------------- */
 
-#Curr-Meeting-Summary {
-    padding: 5mm;
-    border-radius: 14Q;
-    background-image: linear-gradient(to top, #19afc3, #00c4be, #00d69f, #4ee46b, #a8eb12);
-    font-family: "Playfair Display", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
+/* Navigation */
 
 nav {
     background-image: linear-gradient(to right, #b737bc, #8560d6, #4b79dd, #0089d5, #0c93c3);
@@ -118,6 +98,36 @@ a[class="last-nav"] {
 a[class="curr-nav"] {
     background-color: blue
 }
+
+/* -------------------- */
+
+/* Main Content */
+
+#Last-Meeting-Head{
+    color: var(--lastMeet-color, rgb(50, 150, 200))
+}
+
+#Curr-Meeting-Head{
+    color: var(--currMeet-color,#34d523)
+}
+
+#Curr-Meeting-Summary {
+    padding: 5mm;
+    border-radius: 14Q;
+    background-image: linear-gradient(to top, #19afc3, #00c4be, #00d69f, #4ee46b, #a8eb12);
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.taskList {
+    padding: 15px 35px 15px 35px;
+    border-radius: 8px;
+    color: color(display-p3 0 0.4 1);
+    background-color: color-mix(in srgb, color(display-p3 0 0.4 1) 20%, white);
+}
+
+/* Ideas Form */
 
 .meeting-form {
     max-width: 800px;
@@ -195,6 +205,10 @@ p.submit-ideas {
     color: #2700b3;
     font-size: 1.1rem;
 }
+
+/* -------------------- */
+
+/* Responsiveness for smaller screens */
 
 @media (max-width: 600px) {
     
